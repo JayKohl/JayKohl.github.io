@@ -1,12 +1,93 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jonathan Kohl - Game Developer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .project {
+            position: relative;
+            text-align: center;
+            margin: 20px;
+            display: inline-block;
+        }
+
+            .project img {
+                width: 300px;
+                height: auto;
+            }
+
+            .project .overlay {
+                position: absolute;
+                bottom: 8px;
+                left: 16px;
+                color: white;
+                background-color: rgba(0, 0, 0, 0.7);
+                padding: 5px;
+            }
+
+            .project .tooltip {
+                visibility: hidden;
+                width: 200px;
+                background-color: black;
+                color: #fff;
+                text-align: center;
+                border-radius: 6px;
+                padding: 5px;
+                position: absolute;
+                z-index: 1;
+                bottom: 125%;
+                left: 50%;
+                margin-left: -100px;
+                opacity: 0;
+                transition: opacity 0.3s;
+            }
+
+            .project:hover .tooltip {
+                visibility: visible;
+                opacity: 1;
+            }
+    </style>
+</head>
 <body>
-    <h1>Jonathan Kohl</h1>
-    <h2>Game Developer</h2>
-    <h1>Previous Projects</h1>
-    <p>This section should be at the top of the screen. I want Images of the previous game with the game name over the immage. At the bottom add an appproximate release date. when hovering over the immage add tool 
-    tips about roles and quick game info. If you click on the image, I want it to take you to a page dedicated to this game where I talk about the game and my work done.</p>
-    <h1>Currently Working On...</h1>
-    <p>Keep this up to date with current projects and possibly blog posts.</p>
+    <header>
+        <h1>Jonathan Kohl</h1>
+        <h2>Game Developer</h2>
+    </header>
+
+    <section id="previous-projects">
+        <h1>Previous Projects</h1>
+        <div class="project">
+            <a href="project1.html">
+                <img src="path/to/your/image1.jpg" alt="Game 1">
+                <div class="overlay">Game 1</div>
+                <div class="tooltip">Role: Lead Developer<br>Quick info about Game 1</div>
+            </a>
+            <p>Release Date: January 2023</p>
+        </div>
+        <div class="project">
+            <a href="project2.html">
+                <img src="path/to/your/image2.jpg" alt="Game 2">
+                <div class="overlay">Game 2</div>
+                <div class="tooltip">Role: Designer<br>Quick info about Game 2</div>
+            </a>
+            <p>Release Date: June 2022</p>
+        </div>
+        <!-- Add more projects as needed -->
+    </section>
+
+    <section id="current-projects">
+        <h1>Currently Working On...</h1>
+        <p>Keep this up to date with current projects and possibly blog posts.</p>
+    </section>
 </body>
 </html>
