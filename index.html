@@ -7,6 +7,8 @@
     <style>
         body {
             font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
         }
 
         ul {
@@ -14,7 +16,7 @@
             border: 1px solid #555;
             margin: 0;
             padding: 0;
-            width: 10%;
+            width: 200px; /* Adjusted width to a fixed value */
             background-color: #f1f1f1;
             height: 100%; /* Full height */
             position: fixed; /* Make it stick, even on scroll */
@@ -35,9 +37,11 @@
                 background-color: #555;
                 color: white;
             }
+
         li:last-child {
             border-bottom: none;
         }
+
         .active {
             background-color: #04AA6D;
             color: white;
@@ -47,6 +51,7 @@
             position: relative;
             text-align: left;
             padding: 20px;
+            margin-left: 220px; /* Adjusted to account for the width of the sidebar + some spacing */
         }
 
         .project {
@@ -54,6 +59,7 @@
             text-align: center;
             margin: 20px;
             display: inline-block;
+            margin-left: 220px; /* Adjusted to account for the width of the sidebar + some spacing */
         }
 
             .project img {
@@ -62,9 +68,9 @@
             }
 
             .project .overlay {
-                position: center;
-                /*bottom: 8px;
-                left: 16px;*/
+                position: absolute;
+                bottom: 8px;
+                left: 16px;
                 color: white;
                 background-color: rgba(0, 0, 0, 0.7);
                 padding: 5px;
@@ -91,6 +97,11 @@
                 visibility: visible;
                 opacity: 1;
             }
+
+        #previous-projects, #current-projects {
+            margin-left: 220px; /* Adjusted to account for the width of the sidebar + some spacing */
+            padding: 20px;
+        }
     </style>
 </head>
 <body>
@@ -110,8 +121,8 @@
         <h1>Previous Projects</h1>
 
         <div class="project">
-            <a href="PastProjects\inPlainSight.html">
-                <img src="PortfolioImagesDoNotRemove\MissingBow.PNG" alt="In Plain Sight">
+            <a href="PastProjects/inPlainSight.html">
+                <img src="PortfolioImagesDoNotRemove/MissingBow.PNG" alt="In Plain Sight">
                 <div class="overlay">In Plain Sight</div>
                 <div class="tooltip">Role: AI Developer<br>Released: Date</div>
             </a>
@@ -119,8 +130,8 @@
         </div>
 
         <div class="project">
-            <a href="PastProjects\valarius.html">
-                <img src="PortfolioImagesDoNotRemove\GoreProgress.PNG" alt="Valarius">
+            <a href="PastProjects/valarius.html">
+                <img src="PortfolioImagesDoNotRemove/GoreProgress.PNG" alt="Valarius">
                 <div class="overlay">Valarius</div>
                 <div class="tooltip">Role: Lead Developer / AI<br>Released: Date</div>
             </a>
