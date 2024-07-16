@@ -38,13 +38,13 @@
                 color: white;
             }
 
-        li:last-child {
-            border-bottom: none;
-        }
-
         .active {
             background-color: #04AA6D;
             color: white;
+        }
+
+        li:last-child {
+            border-bottom: none;
         }
 
         header {
@@ -106,10 +106,10 @@
 </head>
 <body>
     <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="index.html">About</a></li>
-        <li><a href="index.html">Resume</a></li>
-        <li><a href="index.html">Contact</a></li>
+        <li><a href="index.html" id="home">Home</a></li>
+        <li><a href="about.html" id="about">About</a></li>
+        <li><a href="resume.html" id="resume">Resume</a></li>
+        <li><a href="contact.html" id="contact">Contact</a></li>
     </ul>
 
     <header>
@@ -144,5 +144,18 @@
         <h2>Currently Working On...</h2>
         <p>Keep this up to date with current projects and possibly blog posts.</p>
     </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const currentPath = window.location.pathname.split('/').pop();
+            const navLinks = document.querySelectorAll('ul li a');
+
+            navLinks.forEach(link => {
+                if (link.getAttribute('href') === currentPath) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
 </body>
 </html>
