@@ -47,6 +47,11 @@ header {
     margin-left: 220px; /* Adjusted to account for the width of the sidebar + some spacing */
 }
 
+.header, .content, .section {
+    margin-left: 220px; /* Adjusted to account for the width of the sidebar + some spacing */
+    padding: 20px;
+}
+
 .project {
     position: relative;
     text-align: center;
