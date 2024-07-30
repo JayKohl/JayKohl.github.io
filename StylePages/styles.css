@@ -25,6 +25,10 @@ li a {
     text-decoration: none;
 }
 
+    li a i {
+        margin-right: 10px; /* Add some space between icon and text */
+    }
+
     /* Change the link color on hover */
     li a:hover {
         background-color: #555;
