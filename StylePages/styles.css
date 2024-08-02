@@ -1,102 +1,147 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif; /* Modern font */
     margin: 0;
     padding: 0;
+    color: #333; /* Default text color */
+    background-color: #f4f4f9; /* Soft background color for the page */
 }
 
 ul {
     list-style-type: none;
-    border: 1px solid #555;
     margin: 0;
     padding: 0;
-    width: 200px; /* Sidebar width */
-    background-color: #f1f1f1;
+    width: 220px; /* Fixed width for the sidebar */
+    background-color: #1f2937; /* Dark background for the sidebar */
+    position: fixed; /* Stays fixed on the screen */
     height: 100vh; /* Full height */
-    position: fixed; /* Fixed position to the left */
-    overflow: auto;
+    overflow: auto; /* Allows scrolling */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
 
-/* Styles for text link tabs */
+/* Styles for Text Links */
 li a {
-    text-align: center;
-    border-bottom: 1px solid #555;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #000;
-    padding: 10px 16px;
+    color: #f1f1f1; /* Light text color */
+    padding: 12px 16px;
     text-decoration: none;
     font-size: 18px;
     transition: background-color 0.3s, color 0.3s;
+    border-bottom: 1px solid #333; /* Subtle border between items */
 }
 
-    /* Icon-specific styles */
+    /* Style for Active Link */
+    li a.active {
+        background-color: #04AA6D;
+        color: white;
+    }
+
+    /* Icon-Specific Styles */
     li a i {
         margin-right: 10px; /* Space between icon and text */
-        font-size: 24px; /* Icon size */
-        color: #555; /* Icon color */
+        font-size: 20px; /* Icon size */
+        color: #04AA6D; /* Icon color */
         transition: transform 0.3s, color 0.3s;
     }
 
-    /* Special styles for icon links */
+    /* Special Styles for Icon Links */
     li a.icon-link {
-        background-color: #e0e0e0; /* Different background for icon links */
+        background-color: #333; /* Different background for icon links */
         border-bottom: none; /* Remove border if needed */
     }
 
-        /* Change icon color and transform on hover */
+        /* Change Icon Color and Transform on Hover */
         li a.icon-link i:hover {
             color: #04AA6D; /* Change color on hover */
             transform: scale(1.2); /* Slightly enlarge icon on hover */
         }
 
-    /* Change the link color on hover for text links */
+    /* Change Link Color on Hover for Text Links */
     li a:hover {
         background-color: #555;
         color: white;
     }
 
-.active {
-    background-color: #04AA6D;
-    color: white;
-}
-
+/* Remove Bottom Border from Last List Item */
 li:last-child {
     border-bottom: none;
 }
 
-/* Adjust header to avoid overlapping with sidebar */
+/* Adjust Header to Avoid Overlapping with Sidebar */
 header {
     margin-left: 220px; /* Space for sidebar */
     padding: 20px;
     background-color: #ffffff; /* Optional: different background for header */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
 }
 
-/* General content layout adjustments */
-.header, .content, .section {
+    /* Header Text */
+    header h1 {
+        font-size: 36px;
+        color: #04AA6D; /* Main color for name */
+        margin: 0;
+    }
+
+    header h2 {
+        font-size: 24px;
+        color: #666; /* Secondary color for title */
+        margin: 5px 0 0;
+    }
+
+/* General Content Layout Adjustments */
+.section {
     margin-left: 220px; /* Adjusted for sidebar width */
     padding: 20px;
 }
 
+/* Project Card Styles */
 .project {
     position: relative;
     text-align: center;
     margin: 20px;
     display: inline-block;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border-radius: 8px; /* Rounded corners */
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
+    .project:hover {
+        transform: translateY(-5px); /* Lift effect on hover */
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Enhanced shadow */
+    }
+
+    /* Project Image */
     .project img {
         width: 300px;
         height: 200px;
+        border-bottom: 3px solid #04AA6D; /* Accent border */
     }
 
+    /* Overlay Text */
     .project .overlay {
-        position: center;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
         color: white;
         background-color: rgba(0, 0, 0, 0.7);
-        padding: 5px;
+        padding: 10px;
+        font-size: 18px;
+        opacity: 0;
+        transition: opacity 0.3s;
     }
 
+    .project:hover .overlay {
+        opacity: 1;
+    }
+
+    /* Tooltip Styles */
     .project .tooltip {
         visibility: hidden;
         width: 200px;
@@ -119,7 +164,15 @@ header {
         opacity: 1;
     }
 
-#previous-projects, #current-projects {
+#previous-projects,
+#current-projects {
     margin-left: 220px; /* Space for sidebar */
     padding: 20px;
 }
+
+    #previous-projects h2,
+    #current-projects h2 {
+        font-size: 28px;
+        color: #333;
+        margin-bottom: 20px;
+    }
