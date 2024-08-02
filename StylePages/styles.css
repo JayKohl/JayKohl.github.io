@@ -1,44 +1,55 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
-
+/* Styles for the entire sidebar */
 ul {
     list-style-type: none;
     border: 1px solid #555;
     margin: 0;
     padding: 0;
-    width: 200px; /* Adjusted width to a fixed value */
+    width: 200px;
     background-color: #f1f1f1;
     height: 100vh; /* Full height */
-    position: fixed; /* Make it stick, even on scroll */
-    overflow: auto; /* Enable scrolling if the sidenav has too much content */
+    position: fixed;
+    overflow: auto;
 }
 
+/* Styles for text link tabs */
 li a {
     text-align: center;
     border-bottom: 1px solid #555;
-    display: flex; /* Changed to flex for icon alignment */
-    align-items: center; /* Center vertically */
-    justify-content: flex-start; /* Align text and icons */
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: #000;
     padding: 10px 16px;
     text-decoration: none;
-    font-size: 18px; /* Adjust the size of the text */
+    font-size: 18px;
+    transition: background-color 0.3s, color 0.3s;
 }
 
-i {
-    margin-right: 10px; /* Space between icon and text */
-    font-size: 20px; /* Adjust the size of the icon */
-    color: inherit; /* Inherit color from the link */
-}
+    /* Icon-specific styles */
+    li a i {
+        margin-right: 10px; /* Space between icon and text, can be zero for just icons */
+        font-size: 24px; /* Adjust icon size */
+        color: #555; /* Icon color */
+        transition: transform 0.3s, color 0.3s;
+    }
 
-/* Change the link color on hover */
-li a:hover {
-    background-color: #555;
-    color: white;
-}
+    /* Special styles for icon links */
+    li a.icon-link {
+        background-color: #e0e0e0; /* Different background for icon links */
+        border-bottom: none; /* Remove border if needed */
+    }
+
+        /* Change icon color and transform on hover */
+        li a.icon-link i:hover {
+            color: #04AA6D; /* Change color on hover */
+            transform: scale(1.2); /* Slightly enlarge icon on hover */
+        }
+
+    /* Change the link color on hover for text links */
+    li a:hover {
+        background-color: #555;
+        color: white;
+    }
 
 .active {
     background-color: #04AA6D;
@@ -49,13 +60,7 @@ li:last-child {
     border-bottom: none;
 }
 
-header {
-    position: relative;
-    text-align: left;
-    padding: 20px;
-    margin-left: 220px; /* Adjusted to account for the width of the sidebar + some spacing */
-}
-
+/* General content layout adjustments */
 .header, .content, .section {
     margin-left: 220px; /* Adjusted to account for the width of the sidebar + some spacing */
     padding: 20px;
