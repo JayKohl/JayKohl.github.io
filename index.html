@@ -14,7 +14,7 @@
         <li><a href="OtherLinks/aboutMe.html" id="about">About</a></li>
         <li><a href="OtherLinks/resume.html" id="resume">Resume</a></li>
 
-        <!-- Social media icon links with specific class for styling -->
+        <!-- Social media icon links -->
         <li><a href="https://www.youtube.com" target="_blank" class="icon-link"><i class="fa-brands fa-youtube"></i></a></li>
         <li><a href="https://www.linkedin.com" target="_blank" class="icon-link"><i class="fa-brands fa-linkedin"></i></a></li>
         <li><a href="https://www.github.com" target="_blank" class="icon-link"><i class="fa-brands fa-github"></i></a></li>
@@ -91,24 +91,18 @@
         <h2>Current Projects</h2>
         <div class="project">
             <a href="PastProjects/RomeGame.html">
-                <img src="PortfolioImagesDoNotRemove/MissingBow.PNG" alt="RomeGame">
+                <img src="PortfolioImagesDoNotRemove/MissingBow.PNG" alt="GameOfLife">
                 <div class="overlay">RomeGame</div>
-                <div class="tooltip">Role: Class<br>Released: Date</div>
+                <div class="tooltip">Role: Lead Developer, AI / AI<br>Released: Date</div>
+            </a>
+        </div>
+        <div class="project">
+            <a href="PastProjects/ProjectZombie.html">
+                <img src="PortfolioImagesDoNotRemove/MissingBow.PNG" alt="ProjectZombie">
+                <div class="overlay">ProjectZombie</div>
+                <div class="tooltip">Role: Lead Developer, AI / AI<br>Released: Date</div>
             </a>
         </div>
     </section>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const currentPath = window.location.pathname.split('/').pop();
-            const navLinks = document.querySelectorAll('ul li a');
-
-            navLinks.forEach(link => {
-                if (link.getAttribute('href') === currentPath) {
-                    link.classList.add('active');
-                }
-            });
-        });
-    </script>
 </body>
 </html>
