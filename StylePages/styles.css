@@ -166,7 +166,7 @@ header {
     }
 
 .resume-section {
-    margin-left: 120px; /* Space for the sidebar */
+    margin-left: 120px; /* Space for the sidebar Orig @ 220 */
     padding: 20px;
     text-align: center; /* Center the content within the section */
 }
