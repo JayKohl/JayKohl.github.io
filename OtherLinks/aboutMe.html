@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jonathan Kohl - Game Developer</title>
+    <title>About Me - Jonathan Kohl</title>
     <link rel="stylesheet" href="../StylePages/styles.css">
     <script src="https://kit.fontawesome.com/a891bcefce.js" crossorigin="anonymous"></script>
 </head>
@@ -12,26 +12,88 @@
 <body>
     <ul>
         <li><a href="../index.html" id="home">Home</a></li>
-        <li><a href="aboutMe.html" id="about">About</a></li>
+        <li><a href="aboutMe.html" id="about" class="active">About</a></li>
         <li><a href="resume.html" id="resume">Resume</a></li>
+
+        <!-- Social media icon links -->
+        <li><a href="https://www.youtube.com" target="_blank" class="icon-link"><i class="fa-brands fa-youtube"></i></a></li>
+        <li><a href="https://www.linkedin.com" target="_blank" class="icon-link"><i class="fa-brands fa-linkedin"></i></a></li>
+        <li><a href="https://www.github.com" target="_blank" class="icon-link"><i class="fa-brands fa-github"></i></a></li>
+        <li><a href="https://www.discord.com" target="_blank" class="icon-link"><i class="fa-brands fa-discord"></i></a></li>
+        <li><a href="mailto:your-email@example.com" class="icon-link"><i class="fa-solid fa-envelope"></i></a></li>
     </ul>
 
     <header class="header">
         <h1>Jonathan Kohl</h1>
-        <h2>Game Developer</h2>
+        <h2>About Me</h2>
     </header>
-    <div class="content">
-        <p>
-            Talk about myself and add photos
-            <i class="fa-brands fa-youtube"></i>
-            <i class="fa-brands fa-youtube"></i>
-            <i class="fa-brands fa-youtube"></i>
-            <i class="fa-brands fa-youtube"></i>
-            <i class="fa-brands fa-youtube"></i>
-        </p>
+
+    <div class="content about-content">
+        <section id="introduction">
+            <h2>Introduction</h2>
+            <p>
+                Welcome to my personal page! I am Jonathan Kohl, a passionate game developer with a knack for creativity and problem-solving.
+            </p>
+            <img src="../PortfolioImagesDoNotRemove/my-photo.jpg" alt="Photo of Jonathan Kohl" class="about-photo">
+        </section>
+
+        <section id="career">
+            <h2>Career</h2>
+            <p>
+                My career journey has been exciting and fulfilling. I have worked on various projects, ranging from indie games to large-scale productions. Here's a brief overview of my professional experience:
+            </p>
+            <ul>
+                <li><strong>Job Title 1</strong> - Company Name (Year-Year)</li>
+                <ul>
+                    <li>Brief description of job responsibilities and achievements.</li>
+                </ul>
+                <li><strong>Job Title 2</strong> - Company Name (Year-Year)</li>
+                <ul>
+                    <li>Brief description of job responsibilities and achievements.</li>
+                </ul>
+            </ul>
+        </section>
+
+        <section id="projects">
+            <h2>Projects</h2>
+            <p>
+                Over the years, I have worked on several projects that I'm proud of. Here are some highlights:
+            </p>
+            <ul>
+                <li><strong>Project Name 1</strong>: Brief description of the project.</li>
+                <li><strong>Project Name 2</strong>: Brief description of the project.</li>
+                <li><strong>Project Name 3</strong>: Brief description of the project.</li>
+            </ul>
+        </section>
+
+        <section id="family">
+            <h2>Family</h2>
+            <p>
+                Family means the world to me. I am blessed to have a supportive family that inspires me every day.
+            </p>
+            <img src="../PortfolioImagesDoNotRemove/family-photo.jpg" alt="Family Photo" class="about-photo">
+        </section>
+
+        <section id="hobbies">
+            <h2>Hobbies</h2>
+            <p>
+                Outside of work, I enjoy a variety of hobbies that keep me engaged and active. Here are a few of my favorites:
+            </p>
+            <ul>
+                <li>Hobby 1: Brief description of the hobby.</li>
+                <li>Hobby 2: Brief description of the hobby.</li>
+                <li>Hobby 3: Brief description of the hobby.</li>
+            </ul>
+        </section>
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>If you'd like to get in touch, feel free to reach out through the social media links in the sidebar or email me at <a href="mailto:your-email@example.com">your-email@example.com</a>.</p>
+        </section>
     </div>
 
-    <script>document.addEventListener('DOMContentLoaded', () => {
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
             const currentPath = window.location.pathname.split('/').pop();
             const navLinks = document.querySelectorAll('ul li a');
 
@@ -40,6 +102,8 @@
                     link.classList.add('active');
                 }
             });
-        });</script>
+        });
+    </script>
 </body>
+
 </html>
