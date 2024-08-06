@@ -94,9 +94,10 @@ header {
     }
 
 /* General Content Layout Adjustments */
-.section {
-    margin-left: 220px; /* Adjusted for sidebar width */
+.content {
+    margin-left: 240px; /* Adjusted for sidebar width */
     padding: 20px;
+    overflow: hidden; /* Prevent content overflow */
 }
 
 /* Project Card Styles */
@@ -188,6 +189,7 @@ header {
     border-radius: 5px;
     transition: background-color 0.3s;
     text-align: center;
+    margin-left: 240px; /* Make sure it doesn't overlap with the sidebar */
 }
 
     .download-btn:hover {
@@ -200,7 +202,7 @@ header {
 
 #previous-projects,
 #current-projects {
-    margin-left: 220px; /* Space for sidebar */
+    margin-left: 240px; /* Space for sidebar */
     padding: 20px;
 }
 
