@@ -164,6 +164,40 @@ header {
         opacity: 1;
     }
 
+/* Style for the resume image */
+.resume-image {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+    .resume-image img {
+        width: 100%;
+        max-width: 800px; /* Maximum width for larger screens */
+        border: 1px solid #ddd;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+/* Style for the download button */
+.download-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #04AA6D;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    text-align: center;
+}
+
+    .download-btn:hover {
+        background-color: #037d50;
+    }
+
+    .download-btn i {
+        margin-right: 5px;
+    }
+
 #previous-projects,
 #current-projects {
     margin-left: 220px; /* Space for sidebar */
