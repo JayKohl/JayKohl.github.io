@@ -235,33 +235,3 @@ header {
         color: #333;
         margin-bottom: 20px;
     }
-
-/* List Styles */
-
-ul, ol {
-    list-style-type: disc; /* Adds bullets to unordered lists */
-    margin-left: 240px; /* Space for sidebar */
-    padding-left: 20px; /* Adds indentation for list items */
-}
-
-li {
-    margin-bottom: 10px; /* Space between list items */
-}
-
-/* Career Experience List */
-.career-experience {
-    list-style: disc; /* Adds bullets to the list */
-    margin-left: 20px; /* Adds left margin for indentation */
-}
-
-/* Project List */
-.project-list {
-    list-style: disc;
-    margin-left: 20px;
-}
-
-/* Hobby List */
-.hobby-list {
-    list-style: disc;
-    margin-left: 20px;
-}
