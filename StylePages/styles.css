@@ -6,6 +6,8 @@ body {
     background-color: #f4f4f9; /* Soft background color for the page */
 }
 
+/* Sidebar Navigation */
+
 ul {
     list-style-type: none;
     margin: 0;
@@ -19,6 +21,7 @@ ul {
 }
 
 /* Styles for Text Links */
+
 li a {
     display: flex;
     align-items: center;
@@ -32,12 +35,14 @@ li a {
 }
 
     /* Style for Active Link */
+
     li a.active {
         background-color: #04AA6D;
         color: white;
     }
 
     /* Icon-Specific Styles */
+
     li a i {
         margin-right: 10px; /* Space between icon and text */
         font-size: 20px; /* Icon size */
@@ -46,29 +51,34 @@ li a {
     }
 
     /* Special Styles for Icon Links */
+
     li a.icon-link {
         background-color: #333; /* Different background for icon links */
         border-bottom: none; /* Remove border if needed */
     }
 
         /* Change Icon Color and Transform on Hover */
+
         li a.icon-link i:hover {
             color: #04AA6D; /* Change color on hover */
             transform: scale(1.2); /* Slightly enlarge icon on hover */
         }
 
     /* Change Link Color on Hover for Text Links */
+
     li a:hover {
         background-color: #555;
         color: white;
     }
 
 /* Remove Bottom Border from Last List Item */
+
 li:last-child {
     border-bottom: none;
 }
 
 /* Adjust Header to Avoid Overlapping with Sidebar */
+
 header {
     margin-left: 220px; /* Space for sidebar */
     padding: 20px;
@@ -81,6 +91,7 @@ header {
 }
 
     /* Header Text */
+
     header h1 {
         font-size: 36px;
         color: #04AA6D; /* Main color for name */
@@ -94,6 +105,7 @@ header {
     }
 
 /* General Content Layout Adjustments */
+
 .content {
     margin-left: 240px; /* Adjusted for sidebar width */
     padding: 20px;
@@ -101,6 +113,7 @@ header {
 }
 
 /* Project Card Styles */
+
 .project {
     position: relative;
     text-align: center;
@@ -118,6 +131,7 @@ header {
     }
 
     /* Project Image */
+
     .project img {
         width: 300px;
         height: 200px;
@@ -125,6 +139,7 @@ header {
     }
 
     /* Overlay Text */
+
     .project .overlay {
         position: absolute;
         bottom: 0;
@@ -143,6 +158,7 @@ header {
     }
 
     /* Tooltip Styles */
+
     .project .tooltip {
         visibility: hidden;
         width: 200px;
@@ -165,6 +181,8 @@ header {
         opacity: 1;
     }
 
+/* Resume Section */
+
 .resume-section {
     margin-left: 100px; /* Space for the sidebar Orig @ 220 */
     padding: 20px;
@@ -182,6 +200,8 @@ header {
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         margin-bottom: 10px; /* Add some space between the image and the button */
     }
+
+/* Download Button Styles */
 
 .download-btn {
     display: inline-block;
@@ -203,6 +223,8 @@ header {
     .download-btn i {
         margin-right: 5px;
     }
+
+/* Project Section Styles */
 
 #previous-projects,
 #current-projects {
