@@ -46,30 +46,28 @@
         <section id="game-features">
             <h3>Game Features</h3>
             <h4>Random Level Generator:</h4>
-            <p>My random level generator was created using a grid based system. This grid was created by making a node struct that filled a doubly linked list. All paramaters of the generator were made accessable in the Unreal Engine editor for myself and designers to efficiantly tailor each levels paramaters. 
-            To use my random level genertor all you need to do is add a blueprint object that has my generator as parent to an empty scene. Then you are ready to run the level. Additionaly if you want to alter level details such as minimum rooms to spawn, maximum rooms to spawn, room size, room types, and syle. 
-            All that is needed is to update the variables in the blueprint instance that is found in the respected scene. Additionally the contents of each room is randomized such as enemy spawn, resourse nodes, doors, and lootable chest. these nodes are placeable by a level designer and can easily be made to spawn only 
-            desired potential spawns. Designers also have the option to greate further nodes for random generation in rooms in cases such as clutter, additional walls, or obsticles. </p>
+            <p>
+                My random level generator was created using a grid-based system. This grid was implemented by creating a node struct that filled a doubly linked list. All parameters of the generator are accessible in the Unreal Engine editor, allowing me and other designers to efficiently tailor each level's parameters.
+
+                To use my random level generator, all you need to do is add a blueprint object with my generator as the parent to an empty scene. Once set up, you can run the level immediately. Additionally, if you want to alter level details such as minimum rooms to spawn, maximum rooms to spawn, room size, room types, and style, you can simply update the variables in the blueprint instance found in the respective scene.
+
+                The contents of each room are also randomized, including enemy spawns, resource nodes, doors, and lootable chests. These nodes are placeable by a level designer and can easily be customized to spawn only desired potential elements. Designers also have the option to create further nodes for random generation within rooms, allowing for variations such as clutter, additional walls, or obstacles.
+            </p>
             <h4>Mage</h4>
             <p>
-                The mage is a unique enemy that is only found in level three dungeons. It is capable of three different attacks. when the player is of melee range to the mage it summons a fire shield that damages the player if they continue
-                to stand within it. the second attack is a fire ball that will be shot at the player if they are at a distance. The last attack is a trap; this trap will begin with cracks in the ground to signal the player there is a trap at 
-                that location. Then after some amount of time the trap explodes with lava applying damage to the player if they are standing in the errouption. the damage will continue till the player leaves the trap or the trap disapears.
+                The Mage is a unique enemy found only in level three dungeons. It is capable of three different attacks. When the player is within melee range, the Mage summons a fire shield that damages the player if they remain within it. The second attack is a fireball that the Mage will shoot at the player if they are at a distance. The last attack is a trap that begins with cracks in the ground to signal the player of its presence. After a short time, the trap explodes with lava, dealing damage to the player if they stand in the eruption. The damage continues until the player leaves the trap area or the trap disappears.
             </p>
             <h4>Summoner</h4>
             <p>
-                The summoner enemy has no traditional attacking capabilities. Contrary the summoner relies on its summons to deal damage to the player, these summons require constant focus from the summoner. Two skelletons are able to be 
-                summoned. there is an interval that prevents them from being spawned at the same time. If one dies, the summoner will respawn a new skeleton as soon as possible. If the summoner dies so does all of its summons. The summoner
-                is only found within level one.
+                The Summoner enemy lacks traditional attacking capabilities. Instead, the Summoner relies on its summons to deal damage to the player. These summons require constant focus from the Summoner. Two skeletons can be summoned, with an interval preventing them from being spawned simultaneously. If one skeleton dies, the Summoner will respawn a new one as soon as possible. If the Summoner dies, all its summons perish with it. The Summoner is only found within level one.
             </p>
             <h4>Melee Enemies</h4>
             <p>
-                Within each level you can find melee enemies with varrying difficulty in attack speed, damage, and health. There are eight different melee enemies that can be found throughout the game. On sight an enemie will begin persuing the player, and attacking when within reach. IF AI loose the player they will conduct a search before returning to their original behavior.
+                Each level features melee enemies with varying difficulty in attack speed, damage, and health. There are eight different melee enemies scattered throughout the game. Upon sighting the player, an enemy will begin pursuing and attacking them when within reach. If the AI loses the player, they will conduct a search before returning to their original behavior.
             </p>
             <h4>Crossbow Enemies</h4>
             <p>
-                I made two crossbow variations, but due to difficulty in level two only one of the crossbow enemies made it into the final build. The crossbow enemy that is currently found in level two is a standard ranged unit that will follow the player and shoot bolts at them. All stats and variables can be adjusted on this character to make further variations just like all of my other AI Characters.
-                The crossbow unit that got cut from the final build was a archer that shot bolts in a burst like fassion.
+                I designed two crossbow variations, but due to the difficulty of level two, only one made it into the final build. The crossbow enemy currently found in level two is a standard ranged unit that follows the player and shoots bolts at them. All stats and variables can be adjusted on this character to create further variations, just like with all my other AI characters. The crossbow unit cut from the final build was an archer that shot bolts in a burst fashion.
             </p>
         </section>
 
