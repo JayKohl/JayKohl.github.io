@@ -1,11 +1,74 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Showcase</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"> <!-- Font Awesome for icons -->
+</head>
 <body>
-    <h1>Jonathan Kohl</h1>
-    <h2>Game Developer test</h2>
-    <h1>Monster Eater</h1>
-    <p>
-        Talk about Monster Eater
-    </p>
+    <!-- Sidebar Navigation -->
+    <ul>
+        <li><a href="#home" class="active"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="#about"><i class="fas fa-user"></i> About Me</a></li>
+        <li><a href="#projects"><i class="fas fa-briefcase"></i> Projects</a></li>
+        <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+    </ul>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Jonathan Kohl</h1>
+        <h2>Game Developer</h2>
+    </header>
+
+    <!-- Content Section -->
+    <div class="content">
+        <!-- Game Overview -->
+        <section id="game-overview">
+            <h2>Game Title: [Your Game Name]</h2>
+            <div class="project">
+                <img src="your-game-image.jpg" alt="Game Screenshot">
+                <div class="overlay">
+                    <p>Your Game Subtitle or Tagline</p>
+                </div>
+            </div>
+            <p>Brief description of your game. Describe the game's concept, story, and the overall experience players can expect.</p>
+        </section>
+
+        <!-- Game Features -->
+        <section id="game-features">
+            <h3>Game Features</h3>
+            <ul>
+                <li>Feature 1: Describe the first feature</li>
+                <li>Feature 2: Describe the second feature</li>
+                <li>Feature 3: Describe the third feature</li>
+                <li>Feature 4: Describe the fourth feature</li>
+            </ul>
+        </section>
+
+        <!-- Video/GIF Demo -->
+        <section id="game-demo">
+            <h3>Gameplay Demo</h3>
+            <video controls width="600">
+                <source src="your-game-demo.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <!-- Alternatively, use a GIF -->
+            <!-- <img src="your-game-demo.gif" alt="Gameplay GIF"> -->
+        </section>
+
+        <!-- Download Button -->
+        <section id="download">
+            <a href="your-game-download-link" class="download-btn">
+                <i class="fas fa-download"></i> Download Game
+            </a>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Jonathan Kohl. All rights reserved.</p>
+    </footer>
 </body>
 </html>
