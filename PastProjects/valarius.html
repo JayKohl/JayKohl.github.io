@@ -32,45 +32,40 @@
     <div class="content">
         <!-- Game Overview -->
         <section id="game-overview">
-            <h2>Monster Eater</h2>
+            <h2>Valarius</h2>
             <div class="project">
-                <img src="../PortfolioImagesDoNotRemove/InPlainSightGame.PNG" alt="Monster Eater">
+                <img src="../PortfolioImagesDoNotRemove/InPlainSightGame.PNG" alt="Valarius">
                 <div class="overlay">
                     <p>Gameplay Image</p>
                 </div>
             </div>
-            <p>Monster Eater is an action RPG with survival mechanics. The player will delve into three different levels that are randomly generated. While exploring these procedurally generated levels, the player must harvest and collect resources while trying to avoid the numerous hazards that await.</p>
-            <p>I was the project lead during this portfolio project. Aside from spearheading the game's direction, delegating tasks, organizing meetings, and assisting teammates, my primary role was as the sole AI developer on the team. Excluding myself, there were three other programmers, a game designer, and an artist/animator. I worked closely with our level designer, as I was the only programmer working on the random level generator during this two-month project.</p>
+            <p>Valarius is a sci-fi first-person shooter filled with rewarding exploration, fast-paced combat, and dynamic boss fights. </p>
+            <p>
+                I was the sole AI programmer and team lead for this two-month portfolio project, created using the **Unity Game Engine** by a team of five developers. We successfully completed all deadlines, milestones, and sprint objectives in a timely manner. Additionally, I fully designed all three game levels.
+            </p>
         </section>
 
         <!-- Game Features -->
         <section id="game-features">
             <h3>Game Features</h3>
-            <h4>Random Level Generator:</h4>
+            <h4>Enemy Ai</h4>
             <p>
-                My random level generator was created using a grid-based system. This grid was implemented by creating a node struct that filled a doubly linked list. All parameters of the generator are accessible in the Unreal Engine editor, allowing me and other designers to efficiently tailor each level's parameters.
+                Over the course of this two-month project, I developed eight unique enemy AI, along with several variations that utilize the same functionality but with altered stats. AI can be instantiated in a map or triggered to spawn via a spawner. There are two main types of standard enemies that can be encountered: melee and ranged. AI will wander designated areas and only engage the player when the player is detected by that enemy.
+            </p>
+            <h4>Friendly AI</h4>
+            <p>
+                Friendly characters can be found in the world to assist the player in completing quests, give the player quests, and, in some instances, interact with the player differently after certain events occur in the world.
+            </p>
+            <h4>Menu Interface</h4>
+            <p>
+                I collaborated with team members to develop and design the main menu interface, ensuring an intuitive and user-friendly experience for players.
             </p>
             <p>
-                To use my random level generator, all you need to do is add a blueprint object with my generator as the parent to an empty scene. Once set up, you can run the level immediately. Additionally, if you want to alter level details such as minimum rooms to spawn, maximum rooms to spawn, room size, room types, and style, you can simply update the variables in the blueprint instance found in the respective scene.
+                I developed terminal computers that can be exploded to unlock otherwise locked doorways within a level. This promotes exploration and encourages player interaction during quests outside of combat.
             </p>
+            <h4>Boss Enemies</h4>
             <p>
-                The contents of each room are also randomized, including enemy spawns, resource nodes, doors, and lootable chests. These nodes are placeable by a level designer and can easily be customized to spawn only desired potential elements. Designers also have the option to create further nodes for random generation within rooms, allowing for variations such as clutter, additional walls, or obstacles.
-            </p>
-            <h4>Mage</h4>
-            <p>
-                The Mage is a unique enemy found only in level three dungeons. It is capable of three different attacks. When the player is within melee range, the Mage summons a fire shield that damages the player if they remain within it. The second attack is a fireball that the Mage will shoot at the player if they are at a distance. The last attack is a trap that begins with cracks in the ground to signal the player of its presence. After a short time, the trap explodes with lava, dealing damage to the player if they stand in the eruption. The damage continues until the player leaves the trap area or the trap disappears.
-            </p>
-            <h4>Summoner</h4>
-            <p>
-                The Summoner enemy lacks traditional attacking capabilities. Instead, the Summoner relies on its summons to deal damage to the player. These summons require constant focus from the Summoner. Two skeletons can be summoned, with an interval preventing them from being spawned simultaneously. If one skeleton dies, the Summoner will respawn a new one as soon as possible. If the Summoner dies, all its summons perish with it. The Summoner is only found within level one.
-            </p>
-            <h4>Melee Enemies</h4>
-            <p>
-                Each level features melee enemies with varying difficulty in attack speed, damage, and health. There are eight different melee enemies scattered throughout the game. Upon sighting the player, an enemy will begin pursuing and attacking them when within reach. If the AI loses the player, they will conduct a search before returning to their original behavior.
-            </p>
-            <h4>Crossbow Enemies</h4>
-            <p>
-                I designed two crossbow variations, but due to the difficulty of level two, only one made it into the final build. The crossbow enemy currently found in level two is a standard ranged unit that follows the player and shoots bolts at them. All stats and variables can be adjusted on this character to create further variations, just like with all my other AI characters. The crossbow unit cut from the final build was an archer that shot bolts in a burst fashion.
+                The game features three main bosses, with each boss concluding a level. The level one boss is a mech that begins by shooting standard bullets at the player. If the mech's health reaches a critical point, it will start firing rockets at the player. The mech will also activate a life event where it raises a shield and attempts to heal itself if it does not receive damage. The level two boss is a giant bug with multiple melee capabilities, the ability to spawn zombie-like AI, and two different types of projectile attacks. Lastly, the third boss is an advanced alien technology that forces the player to combat waves of various enemies each round. Between rounds, the boss will shoot the player with a special projectile unique to that round. After sustaining enough damage, it will spawn a protective shield and summon more enemies of the respective wave type. This cycle repeats until the enemy is destroyed.
             </p>
         </section>
 
