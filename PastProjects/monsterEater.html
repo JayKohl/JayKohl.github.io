@@ -36,17 +36,20 @@
             <div class="project">
                 <img src="../PortfolioImagesDoNotRemove/InPlainSightGame.PNG" alt="Monster Eater">
                 <div class="overlay">
-                    <p>Your Game Subtitle or Tagline</p>
+                    <p>Gameplay Image</p>
                 </div>
             </div>
-            <p>Brief description of your game. Describe the game's concept, story, and the overall experience players can expect.</p>
+            <p>Monster Eater in a Action RPG with surval mechanics. The player will delve three different levels that are randomly generated. While exploring these random levels the player will harvest and collect resorces while trying to avoid the numberous hazars that await.</p>
         </section>
 
         <!-- Game Features -->
         <section id="game-features">
             <h3>Game Features</h3>
-            <h4>Feature 1:</h4>
-            <p>talk talk talk</p>
+            <h4>Random Level Generator:</h4>
+            <p>My random level generator was created using a grid based system. This grid was created by making a node struct that filled a doubly linked list. All paramaters of the generator were made accessable in the Unreal Engine editor for myself and designers to efficiantly tailor each levels paramaters. 
+            To use my random level genertor all you need to do is add a blueprint object that has my generator as parent to an empty scene. Then you are ready to run the level. Additionaly if you want to alter level details such as minimum rooms to spawn, maximum rooms to spawn, room size, room types, and syle. 
+            All that is needed is to update the variables in the blueprint instance that is found in the respected scene. Additionally the contents of each room is randomized such as enemy spawn, resourse nodes, doors, and lootable chest. these nodes are placeable by a level designer and can easily be made to spawn only 
+            desired potential spawns. Designers also have the option to greate further nodes for random generation in rooms in cases such as clutter, additional walls, or obsticles. </p>
             <!--<ul>
                 <li>Feature 1: Describe the first feature</li>
                 <li>Feature 2: Describe the second feature</li>
