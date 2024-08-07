@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Showcase</title>
+    <link rel="stylesheet" href="../StylePages/styles.css">
+    <script src="https://kit.fontawesome.com/a891bcefce.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- Sidebar Navigation -->
+    <ul>
+        <li><a href="../index.html" id="home">Home</a></li>
+        <li><a href="../OtherLinks/aboutMe.html" id="about">About</a></li>
+        <li><a href="../OtherLinks/resume.html" id="resume">Resume</a></li>
+
+        <!-- Social media icon links -->
+        <li><a href="https://www.youtube.com/@JonathanKohl" target="_blank" class="icon-link"><i class="fa-brands fa-youtube"></i></a></li>
+        <li><a href="www.linkedin.com/in/jonathan-kohl-681159231" target="_blank" class="icon-link"><i class="fa-brands fa-linkedin"></i></a></li>
+        <li><a href="https://github.com/JayKohl" target="_blank" class="icon-link"><i class="fa-brands fa-github"></i></a></li>
+        <li><a href="discordapp.com/users/jay028012" target="_blank" class="icon-link"><i class="fa-brands fa-discord"></i></a></li>
+        <li><a href="jaymkohl@gmail.com" class="icon-link"><i class="fa-solid fa-envelope"></i></a></li>
+    </ul>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Jonathan Kohl</h1>
+        <h2>Game Developer</h2>
+    </header>
+
+    <!-- Content Section -->
+    <div class="content">
+        <!-- Game Overview -->
+        <section id="game-overview">
+            <h2>Monster Eater</h2>
+            <div class="project">
+                <img src="../PortfolioImagesDoNotRemove/InPlainSightGame.PNG" alt="Monster Eater">
+                <div class="overlay">
+                    <p>Gameplay Image</p>
+                </div>
+            </div>
+            <p>Monster Eater is an action RPG with survival mechanics. The player will delve into three different levels that are randomly generated. While exploring these procedurally generated levels, the player must harvest and collect resources while trying to avoid the numerous hazards that await.</p>
+            <p>I was the project lead during this portfolio project. Aside from spearheading the game's direction, delegating tasks, organizing meetings, and assisting teammates, my primary role was as the sole AI developer on the team. Excluding myself, there were three other programmers, a game designer, and an artist/animator. I worked closely with our level designer, as I was the only programmer working on the random level generator during this two-month project.</p>
+        </section>
+
+        <!-- Game Features -->
+        <section id="game-features">
+            <h3>Game Features</h3>
+            <h4>Random Level Generator:</h4>
+            <p>
+                My random level generator was created using a grid-based system. This grid was implemented by creating a node struct that filled a doubly linked list. All parameters of the generator are accessible in the Unreal Engine editor, allowing me and other designers to efficiently tailor each level's parameters.
+            </p>
+            <p>
+                To use my random level generator, all you need to do is add a blueprint object with my generator as the parent to an empty scene. Once set up, you can run the level immediately. Additionally, if you want to alter level details such as minimum rooms to spawn, maximum rooms to spawn, room size, room types, and style, you can simply update the variables in the blueprint instance found in the respective scene.
+            </p>
+            <p>
+                The contents of each room are also randomized, including enemy spawns, resource nodes, doors, and lootable chests. These nodes are placeable by a level designer and can easily be customized to spawn only desired potential elements. Designers also have the option to create further nodes for random generation within rooms, allowing for variations such as clutter, additional walls, or obstacles.
+            </p>
+            <h4>Mage</h4>
+            <p>
+                The Mage is a unique enemy found only in level three dungeons. It is capable of three different attacks. When the player is within melee range, the Mage summons a fire shield that damages the player if they remain within it. The second attack is a fireball that the Mage will shoot at the player if they are at a distance. The last attack is a trap that begins with cracks in the ground to signal the player of its presence. After a short time, the trap explodes with lava, dealing damage to the player if they stand in the eruption. The damage continues until the player leaves the trap area or the trap disappears.
+            </p>
+            <h4>Summoner</h4>
+            <p>
+                The Summoner enemy lacks traditional attacking capabilities. Instead, the Summoner relies on its summons to deal damage to the player. These summons require constant focus from the Summoner. Two skeletons can be summoned, with an interval preventing them from being spawned simultaneously. If one skeleton dies, the Summoner will respawn a new one as soon as possible. If the Summoner dies, all its summons perish with it. The Summoner is only found within level one.
+            </p>
+            <h4>Melee Enemies</h4>
+            <p>
+                Each level features melee enemies with varying difficulty in attack speed, damage, and health. There are eight different melee enemies scattered throughout the game. Upon sighting the player, an enemy will begin pursuing and attacking them when within reach. If the AI loses the player, they will conduct a search before returning to their original behavior.
+            </p>
+            <h4>Crossbow Enemies</h4>
+            <p>
+                I designed two crossbow variations, but due to the difficulty of level two, only one made it into the final build. The crossbow enemy currently found in level two is a standard ranged unit that follows the player and shoots bolts at them. All stats and variables can be adjusted on this character to create further variations, just like with all my other AI characters. The crossbow unit cut from the final build was an archer that shot bolts in a burst fashion.
+            </p>
+        </section>
+
+        <!-- Video/GIF Demo -->
+        <section id="game-demo">
+            <h3>Gameplay Demo</h3>
+            <video controls width="600">
+                <source src="your-game-demo.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <!-- Alternatively, use a GIF -->
+            <!-- <img src="your-game-demo.gif" alt="Gameplay GIF"> -->
+        </section>
+
+        <!-- Download Button -->
+        <section id="download">
+            <a href="your-game-download-link" class="download-btn">
+                <i class="fas fa-download"></i> Download Game
+            </a>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Jonathan Kohl. All rights reserved.</p>
+    </footer>
+</body>
+</html>
