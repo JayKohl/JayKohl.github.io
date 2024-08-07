@@ -32,45 +32,43 @@
     <div class="content">
         <!-- Game Overview -->
         <section id="game-overview">
-            <h2>Monster Eater</h2>
+            <h2>In Plain Sight</h2>
             <div class="project">
                 <img src="../PortfolioImagesDoNotRemove/InPlainSightGame.PNG" alt="Monster Eater">
                 <div class="overlay">
                     <p>Gameplay Image</p>
                 </div>
             </div>
-            <p>Monster Eater is an action RPG with survival mechanics. The player will delve into three different levels that are randomly generated. While exploring these procedurally generated levels, the player must harvest and collect resources while trying to avoid the numerous hazards that await.</p>
-            <p>I was the project lead during this portfolio project. Aside from spearheading the game's direction, delegating tasks, organizing meetings, and assisting teammates, my primary role was as the sole AI developer on the team. Excluding myself, there were three other programmers, a game designer, and an artist/animator. I worked closely with our level designer, as I was the only programmer working on the random level generator during this two-month project.</p>
+            <p>In plain sight is a stealth based rpg where the player possesses a random NPC in a medieval village. Your goal is to collect ritual items in attempt to preform a cleansing ritual before the entire village falls prey to this demon.</p>
+            <p>Durring the two months of development on this game, I was the project lead and lead AI programmer. Through out the course of this project there were a total of six developers working on this game. All milestones and deadlines were successfully acheived in a timely manner.</p>
         </section>
 
         <!-- Game Features -->
         <section id="game-features">
             <h3>Game Features</h3>
-            <h4>Random Level Generator:</h4>
+            <h4>Villager AI</h4>
             <p>
-                My random level generator was created using a grid-based system. This grid was implemented by creating a node struct that filled a doubly linked list. All parameters of the generator are accessible in the Unreal Engine editor, allowing me and other designers to efficiently tailor each level's parameters.
+                A major feature in this game is the Villager AI. All villagers are possessable by the player. If the AI perceive the player as a threat, they will run to alert the guards. All villagers have daytime and night time tasks/jobs. This can include working market stalls, working in the tavern, or residing at their residence. 
             </p>
+            <h4>Town Guard</h4>
             <p>
-                To use my random level generator, all you need to do is add a blueprint object with my generator as the parent to an empty scene. Once set up, you can run the level immediately. Additionally, if you want to alter level details such as minimum rooms to spawn, maximum rooms to spawn, room size, room types, and style, you can simply update the variables in the blueprint instance found in the respective scene.
-            </p>
+                There are two variations of the town guard. There is a melee and a ranged guard. These Ai can be set to have night shift or dayshift. If AI is working they will be out patrolling path points or standing guard at a desired location. When not working, they can be found in the barracks or tavern. Town Guards can also be possessed by the player which may enable entry into otherwise restricted areas.
+              </p>
+            <h4>Inquisitor</h4>
             <p>
-                The contents of each room are also randomized, including enemy spawns, resource nodes, doors, and lootable chests. These nodes are placeable by a level designer and can easily be customized to spawn only desired potential elements. Designers also have the option to create further nodes for random generation within rooms, allowing for variations such as clutter, additional walls, or obstacles.
-            </p>
-            <h4>Mage</h4>
+                The Inquisitor works much like the town guard except they can not be possessed. Inquisitors regularly enter town from a portal into town depending upon the players actions. Inquisitors are also significantly stronger when fighting the player. There is both a melee and a ranged variation.
+               </p>
+            <h4>Town Alarm (Bell)</h4>
             <p>
-                The Mage is a unique enemy found only in level three dungeons. It is capable of three different attacks. When the player is within melee range, the Mage summons a fire shield that damages the player if they remain within it. The second attack is a fireball that the Mage will shoot at the player if they are at a distance. The last attack is a trap that begins with cracks in the ground to signal the player of its presence. After a short time, the trap explodes with lava, dealing damage to the player if they stand in the eruption. The damage continues until the player leaves the trap area or the trap disappears.
-            </p>
-            <h4>Summoner</h4>
+                The Town Alarm notifies an area of a nearby threat. If the bell is ringing all guards in the area will actively search for the threat in the area, while villagers will retreat to their homes. If an AI detects the player or whitnesses a crime and the bell is not ringing, they will run to the nearest town bell to alert the area. The bell will only ring as long as an AI character is standing nearby ringing it. After the bell is done ringing, there is a cooldown period before normal behavior proceedes.
+                 </p>
+            <h4>Day and Night Routines</h4>
             <p>
-                The Summoner enemy lacks traditional attacking capabilities. Instead, the Summoner relies on its summons to deal damage to the player. These summons require constant focus from the Summoner. Two skeletons can be summoned, with an interval preventing them from being spawned simultaneously. If one skeleton dies, the Summoner will respawn a new one as soon as possible. If the Summoner dies, all its summons perish with it. The Summoner is only found within level one.
-            </p>
-            <h4>Melee Enemies</h4>
+                All AI have day and night routines. Durring the day all villagers will be out at the markets, prayting at the church, in the tavern, or out about the town. At night they will all begin returning to their homes. Guards and Inquisitors follow their designated dayshift/nightshift routines.
+               </p>
+            <h4>Stealth Mechanics</h4>
             <p>
-                Each level features melee enemies with varying difficulty in attack speed, damage, and health. There are eight different melee enemies scattered throughout the game. Upon sighting the player, an enemy will begin pursuing and attacking them when within reach. If the AI loses the player, they will conduct a search before returning to their original behavior.
-            </p>
-            <h4>Crossbow Enemies</h4>
-            <p>
-                I designed two crossbow variations, but due to the difficulty of level two, only one made it into the final build. The crossbow enemy currently found in level two is a standard ranged unit that follows the player and shoots bolts at them. All stats and variables can be adjusted on this character to create further variations, just like with all my other AI characters. The crossbow unit cut from the final build was an archer that shot bolts in a burst fashion.
+                This game uses an indepth stealth mechanic that keeps track of both individual character anxiety and the global anxiety of an area. Aditionally the player has a fluctuating meter of humanity that determines how monstrous they have become, giving direct corilation to detection time. AI rely on visual perception, when decting the player. The player is notified if they are seen by AI indicated by the eybal at the top of the HUD. AI will also take all other environmental factors into acount when determining detection rate of the player such as anxiety, global anxiety, alarms, and restricted zones.
             </p>
         </section>
 
