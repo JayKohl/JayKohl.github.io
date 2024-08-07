@@ -221,6 +221,90 @@ header {
         margin-right: 5px;
     }
 
+/* Game Overview Styles */
+#game-overview {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+    #game-overview h2 {
+        font-size: 32px;
+        color: #04AA6D;
+        margin-bottom: 20px;
+    }
+
+    #game-overview p {
+        font-size: 18px;
+        line-height: 1.6;
+        color: #666;
+    }
+
+/* Game Features Styles */
+#game-features {
+    margin-bottom: 40px;
+}
+
+    #game-features h3 {
+        font-size: 28px;
+        color: #333;
+        margin-bottom: 20px;
+    }
+
+    #game-features ul {
+        list-style-type: disc;
+        padding-left: 40px;
+        font-size: 18px;
+        color: #555;
+    }
+
+        #game-features ul li {
+            margin-bottom: 10px;
+        }
+
+/* Game Demo Styles */
+#game-demo {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+    #game-demo h3 {
+        font-size: 28px;
+        color: #333;
+        margin-bottom: 20px;
+    }
+
+    #game-demo video,
+    #game-demo img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+/* Download Section Styles */
+#download {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+    #download .download-btn {
+        font-size: 20px;
+    }
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #1f2937;
+    color: #f1f1f1;
+    margin-top: 40px;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+    footer p {
+        margin: 0;
+        font-size: 16px;
+    }
 /* Project Section Styles */
 
 #previous-projects,
