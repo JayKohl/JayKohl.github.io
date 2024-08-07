@@ -32,45 +32,43 @@
     <div class="content">
         <!-- Game Overview -->
         <section id="game-overview">
-            <h2>Monster Eater</h2>
+            <h2>Gun Game</h2>
             <div class="project">
-                <img src="../PortfolioImagesDoNotRemove/InPlainSightGame.PNG" alt="Monster Eater">
+                <img src="../PortfolioImagesDoNotRemove/InPlainSightGame.PNG" alt="Gun Game">
                 <div class="overlay">
                     <p>Gameplay Image</p>
                 </div>
             </div>
-            <p>Monster Eater is an action RPG with survival mechanics. The player will delve into three different levels that are randomly generated. While exploring these procedurally generated levels, the player must harvest and collect resources while trying to avoid the numerous hazards that await.</p>
-            <p>I was the project lead during this portfolio project. Aside from spearheading the game's direction, delegating tasks, organizing meetings, and assisting teammates, my primary role was as the sole AI developer on the team. Excluding myself, there were three other programmers, a game designer, and an artist/animator. I worked closely with our level designer, as I was the only programmer working on the random level generator during this two-month project.</p>
+            <p>Gun Game is inspired by classic arcade games such as Vanguard and Asteroids. Players must try to survive three levels of space combat in hopes of reaching a new high score.</p>
+            <p>During this one-month project, I was officially designated as the **Graphics Programmer**. I was responsible for all graphics rendering using **DirectX 11**. Additionally, I collaborated with the other three team members to ensure that all assets were rendered correctly, appropriate levels were loaded, menu screens were displayed, and gameplay functionality was implemented effectively. My contributions also included significant work on AI behavior, pathing, AI combat, and player combat.</p>
         </section>
 
         <!-- Game Features -->
         <section id="game-features">
             <h3>Game Features</h3>
-            <h4>Random Level Generator:</h4>
+            <h4>Project Overhaul</h4>
             <p>
-                My random level generator was created using a grid-based system. This grid was implemented by creating a node struct that filled a doubly linked list. All parameters of the generator are accessible in the Unreal Engine editor, allowing me and other designers to efficiently tailor each level's parameters.
+                During this project, our team was given a test application as a starting point for our game. Within the first week, I removed the rudimentary renderer and replaced the **GVulkanSurface API** with **DirectX 11**. I then integrated my level renderer, enabling us to correctly render levels and significantly enhance the game's visual fidelity.
             </p>
+            <h4>AI</h4>
             <p>
-                To use my random level generator, all you need to do is add a blueprint object with my generator as the parent to an empty scene. Once set up, you can run the level immediately. Additionally, if you want to alter level details such as minimum rooms to spawn, maximum rooms to spawn, room size, room types, and style, you can simply update the variables in the blueprint instance found in the respective scene.
+                AI enemies enter the scene in waves, with two distinct variations present in the game. The first type flies into the scene and begins patrolling a predetermined path while shooting straight ahead. The second type actively seeks out the player and attempts to collide with the player's spaceship. These seeking AI units maintain separation rather than clustering together. I implemented fully functional AI/player collision, accommodating both projectiles and ships. AI can determine the player's direction and adjust their orientation accordingly. Each level features unique AI flight patterns, adding variety and challenge to the gameplay.
             </p>
+            <h4>Pausing</h4>
             <p>
-                The contents of each room are also randomized, including enemy spawns, resource nodes, doors, and lootable chests. These nodes are placeable by a level designer and can easily be customized to spawn only desired potential elements. Designers also have the option to create further nodes for random generation within rooms, allowing for variations such as clutter, additional walls, or obstacles.
+                The game includes a seamless pause feature that freezes gameplay while continuing to render graphics correctly. Once the player unpauses, gameplay resumes without disruption, maintaining a smooth and immersive experience.
             </p>
-            <h4>Mage</h4>
+            <h4>Multiple levels</h4>
             <p>
-                The Mage is a unique enemy found only in level three dungeons. It is capable of three different attacks. When the player is within melee range, the Mage summons a fire shield that damages the player if they remain within it. The second attack is a fireball that the Mage will shoot at the player if they are at a distance. The last attack is a trap that begins with cracks in the ground to signal the player of its presence. After a short time, the trap explodes with lava, dealing damage to the player if they stand in the eruption. The damage continues until the player leaves the trap area or the trap disappears.
+                I rendered three distinct levels for the player to progress through by defeating the required number of enemies. The transition between levels is seamless and efficient, providing a continuous gameplay experience.
             </p>
-            <h4>Summoner</h4>
+            <h4>Drops</h4>
             <p>
-                The Summoner enemy lacks traditional attacking capabilities. Instead, the Summoner relies on its summons to deal damage to the player. These summons require constant focus from the Summoner. Two skeletons can be summoned, with an interval preventing them from being spawned simultaneously. If one skeleton dies, the Summoner will respawn a new one as soon as possible. If the Summoner dies, all its summons perish with it. The Summoner is only found within level one.
+                Players can collect health drops during levels, which increment their maximum lives by one. These drops offer strategic opportunities to enhance survivability and extend gameplay.
             </p>
-            <h4>Melee Enemies</h4>
+            <h4>Menus</h4>
             <p>
-                Each level features melee enemies with varying difficulty in attack speed, damage, and health. There are eight different melee enemies scattered throughout the game. Upon sighting the player, an enemy will begin pursuing and attacking them when within reach. If the AI loses the player, they will conduct a search before returning to their original behavior.
-            </p>
-            <h4>Crossbow Enemies</h4>
-            <p>
-                I designed two crossbow variations, but due to the difficulty of level two, only one made it into the final build. The crossbow enemy currently found in level two is a standard ranged unit that follows the player and shoots bolts at them. All stats and variables can be adjusted on this character to create further variations, just like with all my other AI characters. The crossbow unit cut from the final build was an archer that shot bolts in a burst fashion.
+                I efficiently and successfully rendered a main menu, win menu, and lose menu, providing intuitive and responsive navigation options for players.
             </p>
         </section>
 
