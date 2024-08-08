@@ -32,45 +32,86 @@
     <div class="content">
         <!-- Game Overview -->
         <section id="game-overview">
-            <h2>Monster Eater</h2>
+            <h2>Game of Life</h2>
             <div class="project">
-                <img src="../PortfolioImagesDoNotRemove/InPlainSightGame.PNG" alt="Monster Eater">
+                <img src="../PortfolioImagesDoNotRemove/InPlainSightGame.PNG" alt="Game Of Life">
                 <div class="overlay">
                     <p>Gameplay Image</p>
                 </div>
             </div>
-            <p>Monster Eater is an action RPG with survival mechanics. The player will delve into three different levels that are randomly generated. While exploring these procedurally generated levels, the player must harvest and collect resources while trying to avoid the numerous hazards that await.</p>
-            <p>I was the project lead during this portfolio project. Aside from spearheading the game's direction, delegating tasks, organizing meetings, and assisting teammates, my primary role was as the sole AI developer on the team. Excluding myself, there were three other programmers, a game designer, and an artist/animator. I worked closely with our level designer, as I was the only programmer working on the random level generator during this two-month project.</p>
+            <p>Conway's Game of Life is a computer simulation known as a cellular automaton, designed to model complex systems using simple rules on a grid of cells.</p>
+            <p>
+                This was my first large project at Full Sail University, a solo endeavor in which I fully developed the application. During Project and Portfolio One, I manipulated arrays and data structures within a Windows application to create Conway's Game of Life. This project helped me develop a strong foundation in data manipulation, user interaction, and game design principles.
+            </p>
         </section>
 
         <!-- Game Features -->
         <section id="game-features">
             <h3>Game Features</h3>
-            <h4>Random Level Generator:</h4>
+            <h4>Render Conway's Game of Life in a .NET Application</h4>
             <p>
-                My random level generator was created using a grid-based system. This grid was implemented by creating a node struct that filled a doubly linked list. All parameters of the generator are accessible in the Unreal Engine editor, allowing me and other designers to efficiently tailor each level's parameters.
+                The game renders a grid that represents individual cells, which can be toggled on and off by clicking on them with the mouse. Once a group of cells is activated, the game will simulate life and death according to the following rules:
             </p>
+            <p>Rule 1: Living cells with fewer than two living neighbors will die in the next generation.</p>
+            <p>Rule 2: Living cells with more than three living neighbors will die in the next generation.</p>
+            <p>Rule 3: Living cells with two or three living neighbors will survive to the next generation.</p>
+            <p>Rule 4: Dead cells with exactly three living neighbors will come to life in the next generation.</p>
+            <h4>Tool Strip Buttons</h4>
             <p>
-                To use my random level generator, all you need to do is add a blueprint object with my generator as the parent to an empty scene. Once set up, you can run the level immediately. Additionally, if you want to alter level details such as minimum rooms to spawn, maximum rooms to spawn, room size, room types, and style, you can simply update the variables in the blueprint instance found in the respective scene.
+                The game starts running by clicking the **Start** button and can be paused using the **Pause** button. If the game is paused, it can advance by one generation using the **Next** button found on the tool strip.
             </p>
+            <h4>Randomizing the Universe</h4>
             <p>
-                The contents of each room are also randomized, including enemy spawns, resource nodes, doors, and lootable chests. These nodes are placeable by a level designer and can easily be customized to spawn only desired potential elements. Designers also have the option to create further nodes for random generation within rooms, allowing for variations such as clutter, additional walls, or obstacles.
+                The universe can be randomly populated either by using the current time or a seed variable. The seed is set via a dialog box, and randomization is activated through a menu selection.
             </p>
-            <h4>Mage</h4>
+            <h4>Emptying the Universe</h4>
             <p>
-                The Mage is a unique enemy found only in level three dungeons. It is capable of three different attacks. When the player is within melee range, the Mage summons a fire shield that damages the player if they remain within it. The second attack is a fireball that the Mage will shoot at the player if they are at a distance. The last attack is a trap that begins with cracks in the ground to signal the player of its presence. After a short time, the trap explodes with lava, dealing damage to the player if they stand in the eruption. The damage continues until the player leaves the trap area or the trap disappears.
+                The universe is cleared of all living cells when the **New** or **Clear** menu item is selected, allowing for a fresh start or a new configuration.
             </p>
-            <h4>Summoner</h4>
+            <h4>Saving and Importing</h4>
             <p>
-                The Summoner enemy lacks traditional attacking capabilities. Instead, the Summoner relies on its summons to deal damage to the player. These summons require constant focus from the Summoner. Two skeletons can be summoned, with an interval preventing them from being spawned simultaneously. If one skeleton dies, the Summoner will respawn a new one as soon as possible. If the Summoner dies, all its summons perish with it. The Summoner is only found within level one.
+                The current state and size of the universe can be saved in **PlainText** file format. Users can choose the save file name via a save file dialog box. Additionally, previously saved **PlainText** files can be loaded into the current universe, with the universe resizing to match the size of the file being read.
             </p>
-            <h4>Melee Enemies</h4>
+            <h4>Universe Information</h4>
             <p>
-                Each level features melee enemies with varying difficulty in attack speed, damage, and health. There are eight different melee enemies scattered throughout the game. Upon sighting the player, an enemy will begin pursuing and attacking them when within reach. If the AI loses the player, they will conduct a search before returning to their original behavior.
+                The current generation and number of living cells are tracked and displayed on the status strip at the bottom of the window application, providing real-time information about the simulation's progress.
             </p>
-            <h4>Crossbow Enemies</h4>
+            <h4>Adjustable Options</h4>
             <p>
-                I designed two crossbow variations, but due to the difficulty of level two, only one made it into the final build. The crossbow enemy currently found in level two is a standard ranged unit that follows the player and shoots bolts at them. All stats and variables can be adjusted on this character to create further variations, just like with all my other AI characters. The crossbow unit cut from the final build was an archer that shot bolts in a burst fashion.
+                The number of milliseconds between new generations can be adjusted through a dialog box. The width and height of the current universe can also be customized via a modal dialog box, allowing users to tailor the simulation to their preferences.
+            </p>
+            <h4>Cell Information</h4>
+            <p>
+                The neighbor count for each individual cell is rendered on the grid and can be toggled in the **View** menu, offering insight into each cell's interactions.
+            </p>
+            <h4>View Menu</h4>
+            <p>
+                Features such as neighbor count, grid lines, and heads-up display (HUD) can all be toggled on or off in the **View Menu**, allowing users to customize their view of the simulation.
+            </p>
+
+            <h4>Importing Patterns</h4>
+            <p>
+                PlainText life patterns can be downloaded from the **Life Lexicon** website and imported into the current universe. The universe size remains unchanged when importing new patterns, and importing will not clear the universe before reading in the file.
+            </p>
+            <h4>Game Colors</h4>
+            <p>
+                Users can select individual colors for the grid, background, and living cells through a modal dialog box, enabling a personalized visual experience.
+            </p>
+            <h4>Universe Boundary</h4>
+            <p>
+                Users can choose how the game treats the edges of the universe, with options to switch between toroidal (wrap-around) and finite boundaries.
+            </p>
+            <h4>Context-Sensitive Menu</h4>
+            <p>
+                A context menu strip allows users to change various options in the application, providing a convenient way to adjust settings without navigating through complex menus.
+            </p>
+            <h4>Heads-Up Display (HUD)</h4>
+            <p>
+                The HUD displays essential information such as cell count, boundary type, and universe size. This feature can be toggled on or off in the **View Menu**.
+            </p>
+            <h4>Settings</h4>
+            <p>
+                Changes to universe size, timer interval, and color options persist even after the program is closed and reopened. Users have additional menu items, **Reload** and **Reset**, to revert to the last saved settings or return to the application's default settings.
             </p>
         </section>
 
